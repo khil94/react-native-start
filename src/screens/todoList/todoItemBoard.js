@@ -52,7 +52,7 @@ export default function TodoItemBoard({navigation, isFavo}) {
   ) : (
     <FlatList
       data={items}
-      keyExtractor={(item) => item.id.toString()}
+      keyExtractor={(item) => item.title}
       showsVerticalScrollIndicator={false}
       renderItem={({item}) => (
         <TouchableOpacity onPress={() => onContentView(item)} style={TodoStyles.Todo}>

@@ -31,7 +31,9 @@ export default ContentNav = () => {
           fontStyle: 'normal',
           fontWeight: 'bold',
         },
-
+        headerLeftContainerStyle: {
+          marginLeft: width_unit * 10,
+        },
         cardStyle: {backgroundColor: 'white'},
         headerBackTitleVisible: false,
         headerTintColor: 'black',

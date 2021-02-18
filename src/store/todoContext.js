@@ -5,10 +5,9 @@ const todos = [];
 const todoReducer = (state, action) => {
   switch (action.type) {
     case 'GET_ALL':
-      state.splice(0, state.length);
-      return state.concat(action.data);
+      return action.data;
     case 'CREATE':
-      return state.concat(action.todo);
+      return [...state, action.todo];
     case 'FAVORITE':
       return state.map((todo) => {
         return todo.id === action.id ? {...todo, favorite: !todo.favorite} : todo;
